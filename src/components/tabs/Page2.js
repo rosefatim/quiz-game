@@ -2,7 +2,11 @@ import React from "react";
 import { Layout ,Typography,Button} from "antd";
 import {MenuOutlined,UploadOutlined} from '@ant-design/icons'
 import { componentMenu } from "../constants/componentItems"
+import { addUserData } from "../../store/actions"
 import { Route } from "react-router-dom";
+import { connect } from "react-redux"
+
+
 
 const { Header, Content,  } = Layout;
 const { Text ,Title} = Typography;
@@ -26,11 +30,6 @@ const Page2 = () => {
             <p>Vous pouvez jouer antant de fois que vous le souhaitez.</p>
             <Button style={{backgroundColor:"#A44B9B", color:"white", borderRadius: 5,marginTop:"10%"}}>Commencez le quiz
             </Button>
-
-
-            {componentMenu.map((item, index) => (
-                <Route exact path={item.path} component={item.component} />
-              ))}
             
         </Content>
      
@@ -38,5 +37,16 @@ const Page2 = () => {
     </div>
   );
 };
+const mapStateToProps = (state) => {
+  return {};
+};
 
-export default Page2;
+const mapDispatchStoreToProps = (dispatch) => {
+  return {
+    saveData: (data) => {
+      dispatch(addUserData(data));
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchStoreToProps)(Page2);
