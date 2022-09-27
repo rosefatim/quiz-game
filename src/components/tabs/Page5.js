@@ -1,14 +1,15 @@
 import React from "react";
 import NavBar from "../librairy/Header";
 import { Layout, Typography, Input, Card, Space } from "antd";
-import { QuestionCircleOutlined } from "@ant-design/icons";
+import { QuestionCircleOutlined} from "@ant-design/icons";
+import DisplayCard from "../librairy/DisplayCard";
 import ButtonNext from "../librairy/ButtonNext";
 
 const { Content } = Layout;
 const { Text } = Typography;
 const { Meta } = Card;
 
-const Page3 = () => {
+const Page5 = () => {
   return (
     <div>
       <NavBar />
@@ -27,42 +28,42 @@ const Page3 = () => {
               style={{ width: 240 }}
               cover={
                 <img
-                  src={require("../../assets/pagne.png")}
-                  alt=" le page noir "
+                  src={require("../../assets/bernard.png")}
+                  alt=" bernard "
                   width="240"
                   height="190"
                 />
               }
             >
-              <Meta title="Le pagne noir" />
+              <Meta title="Bernard Dadie" />
             </Card>
             <Card
               hoverable={false}
               style={{ width: 240 }}
               cover={
                 <img
-                  src={require("../../assets/ebinto.png")}
-                  alt="Les frasques d'Ebinto "
+                  src={require("../../assets/aime.png")}
+                  alt="Aimé Césaire "
                   width="240"
                   height="190"
                 />
               }
             >
-              <Meta title="Les frasques d'Ebinto" />
+              <Meta title="Aimé Césaire" />
             </Card>
             <Card
               hoverable={false}
               style={{ width: 240 }}
               cover={
                 <img
-                  src={require("../../assets/aube.png")}
-                  alt=" Et l'aube se leva "
+                  src={require("../../assets/ousmane.png")}
+                  alt=" Sembène Ousmane"
                   width="240"
                   height="190"
                 />
               }
             >
-              <Meta title="Et l'aube se leva " />
+              <Meta title="Sembène Ousmane" />
             </Card>
           </Space>
           <Space direction="horizontal" style={{ marginTop: "2%" }}>
@@ -120,14 +121,12 @@ const Page3 = () => {
               <Input />
             </Card>
           </Space>
-         
-          <ButtonNext
-          to="/page4"
-          />
+          <ButtonNext to="/page6"/>
+
         </Space>
       </Content>
     </div>
   );
 };
 
-export default Page3;
+export default Page5;

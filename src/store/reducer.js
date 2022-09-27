@@ -1,7 +1,8 @@
-import { LOGIN_USER, LOGOUT_USER } from "./action-type"
+import { LOGIN_USER, LOGOUT_USER, ADD_ANSWERS } from "./action-type"
 
 const initialState={
-    user: {}
+    user: {},
+    questions:[], 
 };
 
 const reducer = (state = initialState, action) => {
@@ -16,6 +17,11 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 user:{}
         }
+        case ADD_ANSWERS:
+        return{
+            ...state,
+            questions: action.data
+    }
         default :   return state;
 
     }
