@@ -1,11 +1,10 @@
 import React from "react";
 import { Layout, Typography, Input, Space } from "antd";
 import NavBar from "../librairy/Header";
-import { DownOutlined } from "@ant-design/icons";
-import ButtonNext from "../librairy/ButtonNext";
+import {ButtonNext }from "../librairy/ButtonNext";
 
 const { Content } = Layout;
-const { Text, Title } = Typography;
+const { Text } = Typography;
 
 const Page6 = () => {
   return (

@@ -5,6 +5,7 @@ import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { addUserData, removeUserData } from "../../store/actions";
 import { DisplayButton } from "../librairy/Button";
+import { DisplayImage } from "../librairy/Image";
 import { keyCredential } from "../constants/credential";
 import { sessionHandler } from "../functions/sessionStore";
 
@@ -32,8 +33,8 @@ class Page1 extends Component {
   handleConnect = async () => {
     const { nom, prenom, numero } = this.state;
 
-    if (nom.length ===0 || prenom.length ===0 ||numero.length ===0 ) {
-      return openNotification ("error", "remplicez tous les champs ")     
+    if (nom.length === 0 || prenom.length === 0 || numero.length === 0 ) {
+      return openNotification ("error", "Remplicez tous les champs ")     
     }
     await this.props.saveData({
       nom: nom,
@@ -66,12 +67,13 @@ class Page1 extends Component {
               paddingLeft: 15,
             }}
           >
-            <img
-              width="24"
-              height="24"
-              src={require("../../assets/log.png")}
-              alt="log"
+            <DisplayImage
+              source={require("../../assets/log.png")}
+              w={24}
+              h={24}
+              alt={"log"}
             />
+            
             <Title level={3} style={{ color: "#A44B9B", marginLeft: 15 }}>
               Black Memory Quiz
             </Title>
@@ -154,23 +156,23 @@ class Page1 extends Component {
             border: "1px solid black",
           }}
         >
-          <img
-            width="280"
-            height="300"
-            src={require("../../assets/rectangle12.png")}
-            alt="rect12"
-            style={{
-              borderRadius: "8%",
-              marginTop: "13%",
-              marginLeft: "20%",
-              position: "absolute",
-            }}
-          />
-          <img
-            width="320"
-            height="300"
-            src={require("../../assets/rectangle11.png")}
-            alt="rect11"
+          <DisplayImage
+              source={require("../../assets/rectangle12.png")}
+              w={280}
+              h={300}
+              alt={"rect12"}
+              style={{
+                borderRadius: "8%",
+                marginTop: "13%",
+                marginLeft: "20%",
+                position: "absolute",
+              }}
+            /> 
+            <DisplayImage
+            source={require("../../assets/rectangle11.png")}
+            w={320}
+            h={300}
+            alt={"rect11"}
             style={{
               borderRadius: "8%",
               marginTop: "14%",
@@ -178,11 +180,11 @@ class Page1 extends Component {
               position: "absolute",
             }}
           />
-          <img
-            width="360"
-            height="300"
-            src={require("../../assets/rectangle10.png")}
-            alt="rect10"
+             <DisplayImage
+            source={require("../../assets/rectangle10.png")}
+            w={360}
+            h={300}
+            alt={"rect10"}
             style={{
               borderRadius: "8%",
               marginTop: "15%",
@@ -190,6 +192,7 @@ class Page1 extends Component {
               position: "absolute",
             }}
           />
+       
         </div>
       </div>
     );

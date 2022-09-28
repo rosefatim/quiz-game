@@ -19,4 +19,4 @@ const ButtonNext = (props) => {
   );
 };
 
-export default ButtonNext;
+export  {ButtonNext};

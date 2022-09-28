@@ -2,7 +2,9 @@ import React from "react";
 import NavBar from "../librairy/Header";
 import { Layout, Typography, Input, Card, Space } from "antd";
 import { QuestionCircleOutlined } from "@ant-design/icons";
-import ButtonNext from "../librairy/ButtonNext";
+import {ButtonNext} from "../librairy/ButtonNext";
+import { DisplayImage } from "../librairy/Image";
+import { DisplayCard } from "../librairy/Card";
 
 const { Content } = Layout;
 const { Text } = Typography;
@@ -22,48 +24,43 @@ const Page3 = () => {
         </div>
         <Space direction="vertical" style={{ marginTop: "2%" }}>
           <Space direction="horizontal">
-            <Card
-              hoverable={false}
+            <DisplayCard
               style={{ width: 240 }}
               cover={
-                <img
-                  src={require("../../assets/pagne.png")}
-                  alt=" le page noir "
-                  width="240"
-                  height="190"
-                />
+                <DisplayImage
+                source={require("../../assets/pagne.png")}
+                alt={" le page noir "}
+                w={240}
+                h={190}
+                />              
               }
-            >
-              <Meta title="Le pagne noir" />
-            </Card>
-            <Card
-              hoverable={false}
+              title={"Le pagne noir"}
+            />
+            <DisplayCard
               style={{ width: 240 }}
               cover={
-                <img
-                  src={require("../../assets/ebinto.png")}
-                  alt="Les frasques d'Ebinto "
-                  width="240"
-                  height="190"
-                />
+                <DisplayImage
+                source={require("../../assets/ebinto.png")}
+                alt={"Les frasques d'Ebinto"}
+                w={240}
+                h={190}
+                />              
               }
-            >
-              <Meta title="Les frasques d'Ebinto" />
-            </Card>
-            <Card
-              hoverable={false}
+              title={"Les frasques d'Ebinto"}
+            />
+            <DisplayCard
               style={{ width: 240 }}
               cover={
-                <img
-                  src={require("../../assets/aube.png")}
-                  alt=" Et l'aube se leva "
-                  width="240"
-                  height="190"
-                />
+                <DisplayImage
+                source={require("../../assets/aube.png")}
+                alt={"Et l'aube se leva"}
+                w={240}
+                h={190}
+                />              
               }
-            >
-              <Meta title="Et l'aube se leva " />
-            </Card>
+              title={"Et l'aube se leva"}
+            />
+              
           </Space>
           <Space direction="horizontal" style={{ marginTop: "2%" }}>
             <Card

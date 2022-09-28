@@ -2,8 +2,9 @@ import React from "react";
 import NavBar from "../librairy/Header";
 import { Layout, Typography, Input, Card, Space } from "antd";
 import { QuestionCircleOutlined} from "@ant-design/icons";
-import DisplayCard from "../librairy/DisplayCard";
-import ButtonNext from "../librairy/ButtonNext";
+import {ButtonNext} from "../librairy/ButtonNext";
+import { DisplayCard } from "../librairy/Card";
+import { DisplayImage } from "../librairy/Image";
 
 const { Content } = Layout;
 const { Text } = Typography;
@@ -37,6 +38,7 @@ const Page5 = () => {
             >
               <Meta title="Bernard Dadie" />
             </Card>
+          
             <Card
               hoverable={false}
               style={{ width: 240 }}
