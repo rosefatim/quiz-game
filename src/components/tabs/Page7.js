@@ -50,7 +50,7 @@ const Page7 = () => {
             </Space>
             <DisplayLink
             to="/page8"
-              color="#A44B9B"
+              color={"#A44B9B"}
               text={"Payer 200 FCFA pour valider votre jeu "}
             />
           </Space>

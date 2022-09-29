@@ -131,7 +131,7 @@ class Page1 extends Component {
                 </Form.Item>
 
                 <DisplayButton
-                  text={"Valider et continue"}
+                  text={"Valider et continuer"}
                   onPress={() => this.handleConnect()}
                   style={{
                     width: "70%",

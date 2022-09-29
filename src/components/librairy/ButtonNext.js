@@ -13,6 +13,9 @@ const ButtonNext = (props) => {
           size="large"
           shape="circle"
           icon={<RightOutlined />}
+          onClick={() => {
+            props.onPress();
+          }}
         />
       </Link>
     </div>
