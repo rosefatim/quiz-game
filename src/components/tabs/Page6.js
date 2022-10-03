@@ -16,6 +16,10 @@ class Page6 extends Component {
     finished:false
    } 
 
+   componentDidMount() { 
+    this.props.removeData()
+ }
+
    answerValidator = async ()=>{
     const {answer}= this.state
     if(answer.length === 0 ){
@@ -71,7 +75,7 @@ const mapDispatchStoreToProps = (dispatch) => {
   return {
     saveData: (data) => {
       dispatch(addUserAnswers(data));
-    },removeData: () => {
+    }, removeData: (data) => {
       dispatch(removeUserAnswers());
     }
   };

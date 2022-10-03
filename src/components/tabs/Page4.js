@@ -24,7 +24,7 @@ const { Text } = Typography;
         return openNotification("error","Veuillez repondre à la question.")
    }
    const obj ={
-    q: "Quel est le nombre total des oeuvres africaines dans la chanson Black Memory ?",
+    q2: "Quel est le nombre total des oeuvres africaines dans la chanson Black Memory ?",
     a: [
       answer
     ]
@@ -46,7 +46,7 @@ const { Text } = Typography;
     <div>
       <div>
         <Layout>
-          <NavBar></NavBar>
+          <NavBar/>
 
           <Content style={{height:" 100%", background: "white", padding: "15%" }}>
             <Space direction="vertical">
@@ -73,8 +73,7 @@ const mapDispatchStoreToProps = (dispatch) => {
   return {
     saveData: (data) => {
       dispatch(addUserAnswers(data));
-    },removeData: () => {
-      dispatch(removeUserAnswers());
+    
     }
   };
 };

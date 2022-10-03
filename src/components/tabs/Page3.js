@@ -22,27 +22,24 @@ class Page3 extends Component {
     answer3: "",
     finished:false
  
-   } 
+  } 
 
-   componentDidMount() { 
-    this.props.removeData()
- }
-   answerValidator = async ()=>{
-    const {answer1, answer2,answer3}= this.state
+  answerValidator = async ()=>{
+    const {answer1, answer2, answer3}= this.state
+
     if(answer1.length === 0  || answer2.length === 0 || answer3.length === 0 ){
         return openNotification("error","Veuillez repondre à toutes les questions")
-   }
-   const obj ={
-    q: "Cochez les oeuvres africaines citées dans la chanson Black Memory.Complez les oeuvres manquantes s'il y en a.",
-    a: [
-      answer1,
-      answer2,
-      answer3
-    ]
-   }
-   await this.props.saveData(obj);
-   this.setState({finished:true})
-   //window.location.reload()
+    }
+      const obj ={
+        q1: "Cochez les oeuvres africaines citées dans la chanson Black Memory.Complez les oeuvres manquantes s'il y en a.",
+        a: [
+          answer1,
+          answer2,
+          answer3
+        ]
+      }
+    await this.props.saveData(obj);
+    this.setState({finished:true})
   }
 
   render() { 
@@ -181,8 +178,6 @@ const mapDispatchStoreToProps = (dispatch) => {
   return {
     saveData: (data) => {
       dispatch(addUserAnswers(data));
-    },removeData: () => {
-      dispatch(removeUserAnswers());
     }
   };
 };

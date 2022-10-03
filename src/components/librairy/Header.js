@@ -11,26 +11,23 @@ const NavBar = () => {
   return (
     <div>
         <Layout>
-        <Header
-          style={{
-            backgroundColor: "white",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <DisplayLink
-          to="/"
-          icon={<ReloadOutlined />}  
-          onPress={() => sessionHandler("auth_token", null, "clear")}
+          <Header
+            style={{
+              backgroundColor: "white",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <DisplayLink
+              to="/"
+              icon={<ReloadOutlined />}  
+              onPress={() => sessionHandler("auth_token", null, "clear")}
+            />
+            <Text>Black Memory Quiz</Text>
+            <Button icon={<UploadOutlined />}>Partager le quiz</Button>
+          </Header>
 
-          />
-          
-          <Text>Black Memory Quiz</Text>
-          
-          <Button icon={<UploadOutlined />}>Partager le quiz</Button>
-       
-        </Header>
         </Layout>
 
     </div>

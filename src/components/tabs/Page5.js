@@ -27,7 +27,7 @@ class Page5 extends Component {
         return openNotification("error","Veuillez repondre à toutes les questions")
    }
    const obj ={
-    q: "Cocher les noms des auteurs des oeuvres citées dans la chanson Black Memory Complétez les auteurs s'il y en manquent.",
+    q3: "Cocher les noms des auteurs des oeuvres citées dans la chanson Black Memory Complétez les auteurs s'il y en manquent.",
     a: [
       answer1,
       answer2,
@@ -169,8 +169,6 @@ const mapDispatchStoreToProps = (dispatch) => {
   return {
     saveData: (data) => {
       dispatch(addUserAnswers(data));
-    },removeData: () => {
-      dispatch(removeUserAnswers());
     }
   };
 };

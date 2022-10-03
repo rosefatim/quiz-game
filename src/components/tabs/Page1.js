@@ -3,7 +3,7 @@ import { Form, Typography, Input, Space } from "antd";
 import { openNotification } from "../functions/notification";
 import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-import { addUserData, removeUserData } from "../../store/actions";
+import { addUserData, removeUserData,removeUserAnswers } from "../../store/actions";
 import { DisplayButton } from "../librairy/Button";
 import { DisplayImage } from "../librairy/Image";
 import { keyCredential } from "../constants/credential";
@@ -24,6 +24,7 @@ class Page1 extends Component {
   componentDidMount() { 
       this.props.removeData()
    }
+
 
   closeAlert = () => {
     return this.setState({
@@ -209,6 +210,9 @@ const mapDispatchStoreToProps = (dispatch) => {
     },
     removeData: () => {
       dispatch(removeUserData());
+    },
+    removeAnswers: () => {
+      dispatch(removeUserAnswers());
     }
   };
 };
